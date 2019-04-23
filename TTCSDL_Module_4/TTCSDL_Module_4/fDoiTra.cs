@@ -75,7 +75,7 @@ namespace TTCSDL_Module_4
                 
                 foreach (DataGridViewRow row in dtgvDSDT.Rows)
                 {
-                    if (dtgvDSDT.Rows.Count> 1 && cbIMEI.SelectedValue.ToString().Equals(row.Cells["PT_IMEI"].Value))
+                    if (dtgvDSDT.Rows.Count> 1 && cbIMEI.SelectedValue.ToString().Equals(row.Cells["PDT_IMEI"].Value))
                     {
                         //var a = row.Cells["PT_IMEI"].Value;
                         MessageBox.Show("Mã IMEI đã có trong danh sách đổi", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
