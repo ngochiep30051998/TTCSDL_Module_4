@@ -17,7 +17,8 @@ namespace TTCSDL_Module_4
         BindingSource DanhSachHD = new BindingSource();
         BindingSource DanhSachPT = new BindingSource();
         //public List<CTDoiTra_DTO> DanhSachPT = new List<CTDoiTra_DTO>();
-
+        public string tempIMEI;
+        int tempIndex;
         public fDoiTra()
         {
             InitializeComponent();
@@ -95,6 +96,44 @@ namespace TTCSDL_Module_4
         private void btnInPT_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void dtgvDSDT_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                int index = e.RowIndex;
+                DataGridViewRow dr = dtgvDSDT.Rows[index];
+                tempIMEI = dr.Cells["PDT_IMEI"].Value.ToString();
+                tempIndex = index;
+            } catch(Exception ex)
+            {
+                tempIMEI = null;
+                return;
+            }
+        }
+
+        private void btnXoaSP_Click(object sender, EventArgs e)
+        {
+            if (tempIMEI == null)
+            {
+                MessageBox.Show("Chọn ít nhất 1 sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else
+            {
+                var confirm = MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm có mã IMEI là: " + tempIMEI, "Thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+                if(confirm == DialogResult.Yes)
+                {
+                    DanhSachPT.RemoveAt(tempIndex);
+                    tempIndex = 0;
+                    tempIMEI = null;
+                    dtgvDSDT.DataSource = DanhSachPT;
+                }
+                else
+                {
+                    return;
+                }
+            }
         }
     }
 }

@@ -34,23 +34,6 @@ namespace TTCSDL_Module_4.DAO
             foreach(DataRow item in data.Rows)
             {
                 SanPham_DTO sp = new SanPham_DTO(item);
-                //string[] arrIMEI = sp.IMEI.Split(' ');
-                //if (arrIMEI.Length > 1)
-                //{
-                //    foreach(string tempIEMI in arrIMEI)
-                //    {
-                //        if(tempIEMI.Length == 9)
-                //        {
-                //            SanPham_DTO tempSP = new SanPham_DTO(item);
-                //            tempSP.IMEI = tempIEMI;
-                //            SPTheoHD.Add(tempSP);
-                //        }
-                //    }
-                //}
-                //else
-                //{
-                //    SPTheoHD.Add(sp);
-                //}
                 SPTheoHD.Add(sp);
             }
             return SPTheoHD;
