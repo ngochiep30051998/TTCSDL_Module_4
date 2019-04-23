@@ -7,3 +7,4 @@ E:\study\nam 3\thực tập csdl\Module_4\TTCSDL_Module_4\TTCSDL_Module_4\obj\De
 E:\study\nam 3\thực tập csdl\Module_4\TTCSDL_Module_4\TTCSDL_Module_4\obj\Debug\TTCSDL_Module_4.exe
 E:\study\nam 3\thực tập csdl\Module_4\TTCSDL_Module_4\TTCSDL_Module_4\obj\Debug\TTCSDL_Module_4.pdb
 E:\study\nam 3\thực tập csdl\Module_4\TTCSDL_Module_4\TTCSDL_Module_4\obj\Debug\TTCSDL_Module_4.fDoiTra.resources
+E:\study\nam 3\thực tập csdl\Module_4\TTCSDL_Module_4\TTCSDL_Module_4\obj\Debug\TTCSDL_Module_4.fTatCaPhieuDT.resources

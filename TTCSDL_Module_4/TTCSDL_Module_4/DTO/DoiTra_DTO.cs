@@ -13,12 +13,16 @@ namespace TTCSDL_Module_4.DTO
         public DateTime NgayDoi { get; set; }
         public int IDKH { get; set; }
         public int IDNV { get; set; }
+        public string TenKH { get; set; }
+        public string TenNV { get; set; }
         public DoiTra_DTO()
         {
             IDDoiTra = 0;
             NgayDoi = DateTime.Now;
             IDKH = 0;
             IDNV = 0;
+            TenKH = "";
+            TenNV = "";
         }
         public DoiTra_DTO(DataRow data)
         {
@@ -26,6 +30,8 @@ namespace TTCSDL_Module_4.DTO
             NgayDoi = Convert.ToDateTime(data["NgayDoi"]);
             IDKH = Convert.ToInt32(data["IDKH"]);
             IDNV = Convert.ToInt32(data["IDNV"]);
+            TenKH = data["TenKH"].ToString();
+            TenNV = data["TenNV"].ToString();
         }
     }
 }

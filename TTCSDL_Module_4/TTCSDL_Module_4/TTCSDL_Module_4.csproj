@@ -59,10 +59,19 @@
     <Compile Include="fDoiTra.Designer.cs">
       <DependentUpon>fDoiTra.cs</DependentUpon>
     </Compile>
+    <Compile Include="fTatCaPhieuDT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fTatCaPhieuDT.Designer.cs">
+      <DependentUpon>fTatCaPhieuDT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fDoiTra.resx">
       <DependentUpon>fDoiTra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fTatCaPhieuDT.resx">
+      <DependentUpon>fTatCaPhieuDT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

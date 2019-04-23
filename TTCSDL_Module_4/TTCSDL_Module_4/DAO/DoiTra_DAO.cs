@@ -55,5 +55,27 @@ namespace TTCSDL_Module_4.DAO
             }
             return SPTheoHD;
         }
+        public List<DoiTra_DTO> TimKiemPhieuDT(string Ten)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("TimKiemPT @TenKH", new object[] { Ten });
+            List<DoiTra_DTO> DanhSachPT = new List<DoiTra_DTO>();
+            foreach (DataRow item in data.Rows)
+            {
+                DoiTra_DTO hd = new DoiTra_DTO(item);
+                DanhSachPT.Add(hd);
+            }
+            return DanhSachPT;
+        }
+        public List<CTDoiTra_DTO> LayChiTietPT(int IDDoiTra)
+        {
+            DataTable data = DataProvider.Instance.ExecuteQuery("TimKiemCTPT @IDPT", new object[] { IDDoiTra });
+            List<CTDoiTra_DTO> DanhSachSP = new List<CTDoiTra_DTO>();
+            foreach (DataRow item in data.Rows)
+            {
+                CTDoiTra_DTO hd = new CTDoiTra_DTO(item);
+                DanhSachSP.Add(hd);
+            }
+            return DanhSachSP;
+        }
     }
 }
