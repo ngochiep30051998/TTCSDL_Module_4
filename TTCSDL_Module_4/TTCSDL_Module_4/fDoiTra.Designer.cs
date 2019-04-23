@@ -105,6 +105,14 @@
             this.nmDonGia = new System.Windows.Forms.NumericUpDown();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgvDSDT = new System.Windows.Forms.DataGridView();
+            this.PDT_IMEI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PDT_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PDT_Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PDT_LyDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PDT_IDDoiTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PDT_IDSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PDT_IDHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PDT_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmDonGia)).BeginInit();
@@ -718,6 +726,15 @@
             this.dtgvDSDT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dtgvDSDT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dtgvDSDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvDSDT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PDT_IMEI,
+            this.PDT_TenSP,
+            this.PDT_Gia,
+            this.PDT_LyDo,
+            this.PDT_IDDoiTra,
+            this.PDT_IDSP,
+            this.PDT_IDHoaDon,
+            this.PDT_SoLuong});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -730,6 +747,59 @@
             this.dtgvDSDT.Name = "dtgvDSDT";
             this.dtgvDSDT.Size = new System.Drawing.Size(857, 659);
             this.dtgvDSDT.TabIndex = 1;
+            // 
+            // PDT_IMEI
+            // 
+            this.PDT_IMEI.DataPropertyName = "IMEI";
+            this.PDT_IMEI.HeaderText = "Mã IMEI";
+            this.PDT_IMEI.Name = "PDT_IMEI";
+            this.PDT_IMEI.ReadOnly = true;
+            // 
+            // PDT_TenSP
+            // 
+            this.PDT_TenSP.DataPropertyName = "TenSP";
+            this.PDT_TenSP.HeaderText = "Tên sản phẩm";
+            this.PDT_TenSP.Name = "PDT_TenSP";
+            // 
+            // PDT_Gia
+            // 
+            this.PDT_Gia.DataPropertyName = "Gia";
+            this.PDT_Gia.HeaderText = "Đơn giá ";
+            this.PDT_Gia.Name = "PDT_Gia";
+            // 
+            // PDT_LyDo
+            // 
+            this.PDT_LyDo.DataPropertyName = "LyDo";
+            this.PDT_LyDo.HeaderText = "Lý do đổi trả";
+            this.PDT_LyDo.Name = "PDT_LyDo";
+            // 
+            // PDT_IDDoiTra
+            // 
+            this.PDT_IDDoiTra.DataPropertyName = "IDDoiTra";
+            this.PDT_IDDoiTra.HeaderText = "IDDoiTra";
+            this.PDT_IDDoiTra.Name = "PDT_IDDoiTra";
+            this.PDT_IDDoiTra.Visible = false;
+            // 
+            // PDT_IDSP
+            // 
+            this.PDT_IDSP.DataPropertyName = "IDSP";
+            this.PDT_IDSP.HeaderText = "IDSP";
+            this.PDT_IDSP.Name = "PDT_IDSP";
+            this.PDT_IDSP.Visible = false;
+            // 
+            // PDT_IDHoaDon
+            // 
+            this.PDT_IDHoaDon.DataPropertyName = "IDHoaDon";
+            this.PDT_IDHoaDon.HeaderText = "IDHoaDon";
+            this.PDT_IDHoaDon.Name = "PDT_IDHoaDon";
+            this.PDT_IDHoaDon.Visible = false;
+            // 
+            // PDT_SoLuong
+            // 
+            this.PDT_SoLuong.DataPropertyName = "SoLuong";
+            this.PDT_SoLuong.HeaderText = "SoLuong";
+            this.PDT_SoLuong.Name = "PDT_SoLuong";
+            this.PDT_SoLuong.Visible = false;
             // 
             // fDoiTra
             // 
@@ -852,6 +922,14 @@
         private System.Windows.Forms.NumericUpDown nmDonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;
         private System.Windows.Forms.DataGridView dtgvDSDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PDT_IMEI;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PDT_TenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PDT_Gia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PDT_LyDo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PDT_IDDoiTra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PDT_IDSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PDT_IDHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PDT_SoLuong;
     }
 }
 
