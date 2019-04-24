@@ -46,5 +46,10 @@ namespace TTCSDL_Module_4
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnTimKiem_Click(object sender, EventArgs e)
+        {
+            dtgvDSPT.DataSource = DoiTra_DAO.Instance.TimKiemPhieuDT(txtTimKiem.Text);
+        }
     }
 }

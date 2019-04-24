@@ -6,7 +6,7 @@ select HOADON.*,TenKH,TenNV from KHACHHANG,HOADON,NHANVIEN
 where (KHACHHANG.TenKH like N'%'+@Ten+'%' or TenNV like N'%'+@Ten+'%') and KHACHHANG.IDKH = HOADON.IDKH and NHANVIEN.IDNV = HOADON.IDNV
 end
 -------------------
-TimKiemHD N'Tuyền'
+TimKiemHD N''
 ------------------------------------------------------------------------------
 select * from 
 HOADON join CHITIETHOADON on HOADON.IDHD = CHITIETHOADON.IDHD 
