@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvDSPT = new System.Windows.Forms.DataGridView();
             this.IDDoiTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +42,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnThemPhieu = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDSPT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCTPT)).BeginInit();
             this.SuspendLayout();
@@ -60,8 +61,8 @@
             this.TenNV});
             this.dtgvDSPT.Location = new System.Drawing.Point(12, 65);
             this.dtgvDSPT.Name = "dtgvDSPT";
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvDSPT.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvDSPT.RowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvDSPT.Size = new System.Drawing.Size(689, 555);
             this.dtgvDSPT.TabIndex = 0;
             this.dtgvDSPT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDSPT_CellClick);
@@ -164,11 +165,21 @@
             this.btnThemPhieu.UseVisualStyleBackColor = true;
             this.btnThemPhieu.Click += new System.EventHandler(this.btnThemPhieu_Click);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(1231, 3);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 56);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "In phiếu";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // fTatCaPhieuDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1318, 632);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnThemPhieu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -201,5 +212,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IDKH;
         private System.Windows.Forms.DataGridViewTextBoxColumn IDNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
+        private System.Windows.Forms.Button button1;
     }
 }

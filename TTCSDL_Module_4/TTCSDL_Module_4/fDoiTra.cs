@@ -55,6 +55,7 @@ namespace TTCSDL_Module_4
                 int index = e.RowIndex;
                 DataGridViewRow dr = dtgvSP.Rows[index];
                 txtTenSP.Text = dr.Cells["TenSP"].Value.ToString();
+                txtMaSP.Text = dr.Cells["SP_IDSP"].Value.ToString();
                 nmDonGia.Value = Convert.ToDecimal(dr.Cells["Gia"].Value);
                 string[] arrIMEI = dr.Cells["IMEI"].Value.ToString().Split(' ');
                 Array.Reverse(arrIMEI);
@@ -84,6 +85,8 @@ namespace TTCSDL_Module_4
                     }
                 }
                 CTDoiTra_DTO ChiTiet_DT = new CTDoiTra_DTO();
+                ChiTiet_DT.IDHoaDon = Convert.ToInt32(txtIDHD.Text);
+                ChiTiet_DT.IDSP = Convert.ToInt32(txtMaSP.Text);
                 ChiTiet_DT.TenSP = txtTenSP.Text;
                 ChiTiet_DT.Gia = nmDonGia.Value;
                 ChiTiet_DT.LyDo = txtLyDo.Text;
@@ -115,25 +118,32 @@ namespace TTCSDL_Module_4
 
         private void btnXoaSP_Click(object sender, EventArgs e)
         {
-            if (tempIMEI == null)
+            try
             {
-                MessageBox.Show("Chọn ít nhất 1 sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-            else
-            {
-                var confirm = MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm có mã IMEI là: " + tempIMEI, "Thông báo", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
-                if(confirm == DialogResult.Yes)
+                if (tempIMEI == null)
                 {
-                    DanhSachPT.RemoveAt(tempIndex);
-                    tempIndex = 0;
-                    tempIMEI = null;
-                    dtgvDSDT.DataSource = DanhSachPT;
+                    MessageBox.Show("Chọn ít nhất 1 sản phẩm.", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
                 else
                 {
-                    return;
+                    var confirm = MessageBox.Show("Bạn có chắc chắn muốn xóa sản phẩm có mã IMEI là: " + tempIMEI, "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                    if (confirm == DialogResult.Yes)
+                    {
+                        DanhSachPT.RemoveAt(tempIndex);
+                        tempIndex = 0;
+                        tempIMEI = null;
+                        dtgvDSDT.DataSource = DanhSachPT;
+                    }
+                    else
+                    {
+                        return;
+                    }
                 }
+            } catch(Exception ex)
+            {
+                return; 
             }
+
         }
     }
 }
