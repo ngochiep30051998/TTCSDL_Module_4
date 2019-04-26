@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvDSPT = new System.Windows.Forms.DataGridView();
             this.IDDoiTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -43,6 +44,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnThemPhieu = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.CT_IDDoiTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IDSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CT_IDHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CT_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CT_LyDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CT_IMEI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDSPT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCTPT)).BeginInit();
             this.SuspendLayout();
@@ -112,10 +120,29 @@
             // 
             // dtgvCTPT
             // 
+            this.dtgvCTPT.AllowUserToResizeColumns = false;
+            this.dtgvCTPT.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dtgvCTPT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgvCTPT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvCTPT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CT_IDDoiTra,
+            this.IDSP,
+            this.TenSP,
+            this.CT_IDHoaDon,
+            this.CT_SoLuong,
+            this.CT_LyDo,
+            this.CT_IMEI});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvCTPT.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgvCTPT.Location = new System.Drawing.Point(721, 65);
             this.dtgvCTPT.Name = "dtgvCTPT";
-            this.dtgvCTPT.Size = new System.Drawing.Size(585, 555);
+            this.dtgvCTPT.Size = new System.Drawing.Size(585, 283);
             this.dtgvCTPT.TabIndex = 1;
             // 
             // txtTimKiem
@@ -174,6 +201,51 @@
             this.button1.Text = "In phiếu";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // CT_IDDoiTra
+            // 
+            this.CT_IDDoiTra.DataPropertyName = "IDDoiTra";
+            this.CT_IDDoiTra.HeaderText = "Mã phiếu trả";
+            this.CT_IDDoiTra.Name = "CT_IDDoiTra";
+            this.CT_IDDoiTra.Visible = false;
+            // 
+            // IDSP
+            // 
+            this.IDSP.DataPropertyName = "IDSP";
+            this.IDSP.HeaderText = "Mã sản phẩm";
+            this.IDSP.Name = "IDSP";
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "TenSP";
+            this.TenSP.HeaderText = "Tên sản phẩm";
+            this.TenSP.Name = "TenSP";
+            // 
+            // CT_IDHoaDon
+            // 
+            this.CT_IDHoaDon.DataPropertyName = "IDHoaDon";
+            this.CT_IDHoaDon.HeaderText = "Mã hóa đơn mua";
+            this.CT_IDHoaDon.Name = "CT_IDHoaDon";
+            this.CT_IDHoaDon.Visible = false;
+            // 
+            // CT_SoLuong
+            // 
+            this.CT_SoLuong.DataPropertyName = "SoLuong";
+            this.CT_SoLuong.HeaderText = "Số lượng";
+            this.CT_SoLuong.Name = "CT_SoLuong";
+            // 
+            // CT_LyDo
+            // 
+            this.CT_LyDo.DataPropertyName = "LyDo";
+            this.CT_LyDo.HeaderText = "Lý do";
+            this.CT_LyDo.Name = "CT_LyDo";
+            // 
+            // CT_IMEI
+            // 
+            this.CT_IMEI.DataPropertyName = "IMEI";
+            this.CT_IMEI.HeaderText = "IMEI";
+            this.CT_IMEI.Name = "CT_IMEI";
+            this.CT_IMEI.Visible = false;
+            // 
             // fTatCaPhieuDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -213,5 +285,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn IDNV;
         private System.Windows.Forms.DataGridViewTextBoxColumn TenNV;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CT_IDDoiTra;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CT_IDHoaDon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CT_SoLuong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CT_LyDo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CT_IMEI;
     }
 }

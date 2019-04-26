@@ -52,6 +52,7 @@
     <Compile Include="DTO\DoiTra_DTO.cs" />
     <Compile Include="DTO\HoaDon_DTO.cs" />
     <Compile Include="DTO\KhachHang_DTO.cs" />
+    <Compile Include="DTO\NhanVien_DTO.cs" />
     <Compile Include="DTO\SanPham_DTO.cs" />
     <Compile Include="fDoiTra.cs">
       <SubType>Form</SubType>

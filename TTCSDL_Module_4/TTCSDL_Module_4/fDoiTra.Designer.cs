@@ -56,12 +56,12 @@
             this.ThueGTGT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTenKH = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.PT_LyDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.txtSDT = new System.Windows.Forms.TextBox();
             this.PT_IDHD = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PT_IDDoiTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PT_IDSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -93,13 +93,13 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbIMEI = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbNhanVien = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtLyDo = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.dtpkNgayDoi = new System.Windows.Forms.DateTimePicker();
             this.btnThemPT = new System.Windows.Forms.Button();
             this.btnInPT = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
@@ -164,6 +164,7 @@
             this.dtgvHD.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvHD.Location = new System.Drawing.Point(12, 39);
             this.dtgvHD.Name = "dtgvHD";
+            this.dtgvHD.ReadOnly = true;
             this.dtgvHD.Size = new System.Drawing.Size(541, 229);
             this.dtgvHD.TabIndex = 9;
             // 
@@ -224,6 +225,7 @@
             this.HD_ThueGTGT.DataPropertyName = "ThueGTGT";
             this.HD_ThueGTGT.HeaderText = "Column1";
             this.HD_ThueGTGT.Name = "HD_ThueGTGT";
+            this.HD_ThueGTGT.ReadOnly = true;
             this.HD_ThueGTGT.Visible = false;
             // 
             // SP_IDHD
@@ -354,12 +356,12 @@
             this.btnTimKiem.UseVisualStyleBackColor = true;
             this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
-            // textBox2
+            // txtTenKH
             // 
-            this.textBox2.Location = new System.Drawing.Point(669, 13);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(243, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtTenKH.Location = new System.Drawing.Point(669, 13);
+            this.txtTenKH.Name = "txtTenKH";
+            this.txtTenKH.Size = new System.Drawing.Size(243, 20);
+            this.txtTenKH.TabIndex = 5;
             // 
             // label1
             // 
@@ -393,12 +395,12 @@
             this.textBox3.Size = new System.Drawing.Size(243, 20);
             this.textBox3.TabIndex = 8;
             // 
-            // textBox5
+            // txtSDT
             // 
-            this.textBox5.Location = new System.Drawing.Point(669, 46);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(243, 20);
-            this.textBox5.TabIndex = 8;
+            this.txtSDT.Location = new System.Drawing.Point(669, 46);
+            this.txtSDT.Name = "txtSDT";
+            this.txtSDT.Size = new System.Drawing.Size(243, 20);
+            this.txtSDT.TabIndex = 8;
             // 
             // PT_IDHD
             // 
@@ -631,13 +633,15 @@
             this.label6.TabIndex = 19;
             this.label6.Text = "Nhân viên";
             // 
-            // comboBox1
+            // cbNhanVien
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1036, 10);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(214, 21);
-            this.comboBox1.TabIndex = 20;
+            this.cbNhanVien.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cbNhanVien.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
+            this.cbNhanVien.FormattingEnabled = true;
+            this.cbNhanVien.Location = new System.Drawing.Point(1036, 10);
+            this.cbNhanVien.Name = "cbNhanVien";
+            this.cbNhanVien.Size = new System.Drawing.Size(214, 21);
+            this.cbNhanVien.TabIndex = 20;
             // 
             // label7
             // 
@@ -679,12 +683,12 @@
             this.label8.TabIndex = 24;
             this.label8.Text = "Ngày đổi";
             // 
-            // dateTimePicker2
+            // dtpkNgayDoi
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(1036, 42);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(182, 20);
-            this.dateTimePicker2.TabIndex = 23;
+            this.dtpkNgayDoi.Location = new System.Drawing.Point(1036, 42);
+            this.dtpkNgayDoi.Name = "dtpkNgayDoi";
+            this.dtpkNgayDoi.Size = new System.Drawing.Size(182, 20);
+            this.dtpkNgayDoi.TabIndex = 23;
             // 
             // btnThemPT
             // 
@@ -694,6 +698,7 @@
             this.btnThemPT.TabIndex = 25;
             this.btnThemPT.Text = "Hoàn thành";
             this.btnThemPT.UseVisualStyleBackColor = true;
+            this.btnThemPT.Click += new System.EventHandler(this.btnThemPT_Click);
             // 
             // btnInPT
             // 
@@ -723,6 +728,7 @@
             0,
             0});
             this.nmDonGia.Name = "nmDonGia";
+            this.nmDonGia.ReadOnly = true;
             this.nmDonGia.Size = new System.Drawing.Size(118, 20);
             this.nmDonGia.TabIndex = 28;
             // 
@@ -758,6 +764,7 @@
             this.dtgvDSDT.DefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvDSDT.Location = new System.Drawing.Point(580, 89);
             this.dtgvDSDT.Name = "dtgvDSDT";
+            this.dtgvDSDT.ReadOnly = true;
             this.dtgvDSDT.Size = new System.Drawing.Size(857, 561);
             this.dtgvDSDT.TabIndex = 1;
             this.dtgvDSDT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDSDT_CellClick);
@@ -782,6 +789,7 @@
             this.btnHuy.TabIndex = 30;
             this.btnHuy.Text = "Hủy tất cả thông tin đã nhập";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // label10
             // 
@@ -805,6 +813,7 @@
             this.PDT_IDSP.DataPropertyName = "IDSP";
             this.PDT_IDSP.HeaderText = "Mã sản phẩm";
             this.PDT_IDSP.Name = "PDT_IDSP";
+            this.PDT_IDSP.ReadOnly = true;
             // 
             // PDT_IMEI
             // 
@@ -818,24 +827,28 @@
             this.PDT_TenSP.DataPropertyName = "TenSP";
             this.PDT_TenSP.HeaderText = "Tên sản phẩm";
             this.PDT_TenSP.Name = "PDT_TenSP";
+            this.PDT_TenSP.ReadOnly = true;
             // 
             // PDT_Gia
             // 
             this.PDT_Gia.DataPropertyName = "Gia";
             this.PDT_Gia.HeaderText = "Đơn giá ";
             this.PDT_Gia.Name = "PDT_Gia";
+            this.PDT_Gia.ReadOnly = true;
             // 
             // PDT_LyDo
             // 
             this.PDT_LyDo.DataPropertyName = "LyDo";
             this.PDT_LyDo.HeaderText = "Lý do đổi trả";
             this.PDT_LyDo.Name = "PDT_LyDo";
+            this.PDT_LyDo.ReadOnly = true;
             // 
             // PDT_IDDoiTra
             // 
             this.PDT_IDDoiTra.DataPropertyName = "IDDoiTra";
             this.PDT_IDDoiTra.HeaderText = "IDDoiTra";
             this.PDT_IDDoiTra.Name = "PDT_IDDoiTra";
+            this.PDT_IDDoiTra.ReadOnly = true;
             this.PDT_IDDoiTra.Visible = false;
             // 
             // PDT_IDHoaDon
@@ -843,6 +856,7 @@
             this.PDT_IDHoaDon.DataPropertyName = "IDHoaDon";
             this.PDT_IDHoaDon.HeaderText = "IDHoaDon";
             this.PDT_IDHoaDon.Name = "PDT_IDHoaDon";
+            this.PDT_IDHoaDon.ReadOnly = true;
             this.PDT_IDHoaDon.Visible = false;
             // 
             // PDT_SoLuong
@@ -850,6 +864,7 @@
             this.PDT_SoLuong.DataPropertyName = "SoLuong";
             this.PDT_SoLuong.HeaderText = "SoLuong";
             this.PDT_SoLuong.Name = "PDT_SoLuong";
+            this.PDT_SoLuong.ReadOnly = true;
             this.PDT_SoLuong.Visible = false;
             // 
             // fDoiTra
@@ -865,12 +880,12 @@
             this.Controls.Add(this.label9);
             this.Controls.Add(this.btnInPT);
             this.Controls.Add(this.btnThemPT);
-            this.Controls.Add(this.dateTimePicker2);
+            this.Controls.Add(this.dtpkNgayDoi);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.txtLyDo);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbNhanVien);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.btnThemSP);
             this.Controls.Add(this.cbIMEI);
@@ -881,12 +896,12 @@
             this.Controls.Add(this.txtIDHD);
             this.Controls.Add(this.dtgvSP);
             this.Controls.Add(this.btnLayThongTinHD);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.dtgvHD);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.txtTenKH);
             this.Controls.Add(this.btnTimKiem);
             this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.dtgvDSDT);
@@ -920,12 +935,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ThueGTGT;
         private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTenKH;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridViewTextBoxColumn PT_LyDo;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.DataGridViewTextBoxColumn PT_IDHD;
         private System.Windows.Forms.DataGridViewTextBoxColumn PT_IDDoiTra;
         private System.Windows.Forms.DataGridViewTextBoxColumn PT_IDSP;
@@ -957,13 +972,13 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox cbIMEI;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbNhanVien;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtLyDo;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker dtpkNgayDoi;
         private System.Windows.Forms.Button btnThemPT;
         private System.Windows.Forms.Button btnInPT;
         private System.Windows.Forms.Label label9;

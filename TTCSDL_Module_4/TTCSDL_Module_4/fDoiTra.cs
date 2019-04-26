@@ -19,6 +19,7 @@ namespace TTCSDL_Module_4
         //public List<CTDoiTra_DTO> DanhSachPT = new List<CTDoiTra_DTO>();
         public string tempIMEI;
         int tempIndex;
+        List<CTDoiTra_DTO> listDT = new List<CTDoiTra_DTO>();
         public fDoiTra()
         {
             InitializeComponent();
@@ -31,7 +32,14 @@ namespace TTCSDL_Module_4
             //dtgvDSDT.DataSource = typeof(List<CTDoiTra_DTO>);
             dtgvDSDT.DataSource = DanhSachPT;
             DanhSachHD.DataSource = DoiTra_DAO.Instance.TimKiemHD("");
+            loadCBNhanVien(cbNhanVien);
 
+        }
+        void loadCBNhanVien(ComboBox cb)
+        {
+            cb.DataSource = DoiTra_DAO.Instance.LayTatCaNV();
+            cb.DisplayMember = "TenNV";
+            cb.ValueMember = "IDNV";
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
@@ -68,6 +76,10 @@ namespace TTCSDL_Module_4
 
         private void btnThemSP_Click(object sender, EventArgs e)
         {
+            if(txtLyDo.Text == "")
+            {
+                MessageBox.Show("Đổi trả thì phải có lí do chứ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             if (cbIMEI.Text == "")
             {
                 MessageBox.Show("Mã IMEI không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -92,6 +104,7 @@ namespace TTCSDL_Module_4
                 ChiTiet_DT.LyDo = txtLyDo.Text;
                 ChiTiet_DT.IMEI = cbIMEI.SelectedValue.ToString();
                 DanhSachPT.Add(ChiTiet_DT);
+                listDT.Add(ChiTiet_DT);
                 dtgvDSDT.DataSource = DanhSachPT;
             }
             
@@ -130,6 +143,7 @@ namespace TTCSDL_Module_4
                     if (confirm == DialogResult.Yes)
                     {
                         DanhSachPT.RemoveAt(tempIndex);
+                        listDT.RemoveAt(tempIndex);
                         tempIndex = 0;
                         tempIMEI = null;
                         dtgvDSDT.DataSource = DanhSachPT;
@@ -144,6 +158,31 @@ namespace TTCSDL_Module_4
                 return; 
             }
 
+        }
+
+        private void btnThemPT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(txtTenKH.Text == "" || txtSDT.Text == "")
+                {
+                    MessageBox.Show("nhập đầy đủ thông tin khách hàng!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+                string ThemPhieuDT = DoiTra_DAO.Instance.HoanThanh(listDT, dtpkNgayDoi.Value, txtTenKH.Text, Convert.ToInt32(cbNhanVien.SelectedValue), txtSDT.Text);
+                MessageBox.Show("thêm thành công 1 phiếu đổi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void btnHuy_Click(object sender, EventArgs e)
+        {
+            txtTenKH.Text = "";
+            loadCBNhanVien(cbNhanVien);
+            txtSDT.Text = "";
+            dtpkNgayDoi.Value = DateTime.Now;
         }
     }
 }
