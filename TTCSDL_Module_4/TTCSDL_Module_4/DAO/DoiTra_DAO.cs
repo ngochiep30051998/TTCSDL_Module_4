@@ -207,5 +207,14 @@ namespace TTCSDL_Module_4.DAO
             }
             return 0;
         }
+        public int CapNhatPhieuTra(int IDPT, DateTime NgayTra, int IDKH,string TenKH, int IDNV)
+        {
+            int CapNhap = DataProvider.Instance.ExecuteNonQuery("SuaPhieuDoi @IDPhieuTra , @NgayTra , @IDKH , @TenKH , @IDNhanVien", new object[] { IDPT, NgayTra.ToShortDateString(),IDKH, TenKH,IDNV });
+            if(CapNhap > 0)
+            {
+                return CapNhap;
+            }
+            return 0;
+        }
     }
 }

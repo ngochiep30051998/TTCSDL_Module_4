@@ -71,7 +71,7 @@ begin
 		print 'update'
 	end
 end
-
+ThemCTPhieuTra 8,22,1, N'123123',13,'15100000123'
 select IDSP from DOITRA join CHITIETDOITRA on DOITRA.IDDoiTra = CHITIETDOITRA.IDDoiTra
 where DOITRA.IDDoiTra = 1
 
@@ -89,3 +89,15 @@ end
 
 select * from DOITRA
 delete from DOITRA where IDDoiTra = 7
+select * from CHITIETDOITRA where IDDoiTra = 8
+update CHITIETDOITRA set SoLuong = 1 where IDDoiTra = 8 and IDSP = 25
+select * from DOITRA join CHITIETDOITRA on DOITRA.IDDoiTra = CHITIETDOITRA.IDDoiTra where DOITRA.IDDoiTra = 8
+update CHITIETDOITRA set LyDo = N'333333' where CHITIETDOITRA.IDDoiTra = 8 and IDSP = 25
+--proc sửa thông tin phiếu đổi
+
+create proc SuaPhieuDoi(@IDPhieuTra int, @NgayTra Date,@IDKH int,@TenKH nvarchar(250),@IDNhanVien int)
+as
+begin
+	update KHACHHANG set TenKH = @TenKH where IDKH = @IDKH
+	update DOITRA set IDNV = @IDNhanVien, NgayDoi = @NgayTra where IDDoiTra = @IDPhieuTra
+end
