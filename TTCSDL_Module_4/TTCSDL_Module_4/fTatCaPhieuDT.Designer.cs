@@ -38,12 +38,6 @@
             this.IDNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenNV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgvCTPT = new System.Windows.Forms.DataGridView();
-            this.txtTimKiem = new System.Windows.Forms.TextBox();
-            this.btnTimKiem = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.btnThemPhieu = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
             this.CT_IDDoiTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,6 +45,13 @@
             this.CT_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CT_LyDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CT_IMEI = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
+            this.btnTimKiem = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnThemPhieu = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnXoaPT = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDSPT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCTPT)).BeginInit();
             this.SuspendLayout();
@@ -145,6 +146,51 @@
             this.dtgvCTPT.Size = new System.Drawing.Size(585, 283);
             this.dtgvCTPT.TabIndex = 1;
             // 
+            // CT_IDDoiTra
+            // 
+            this.CT_IDDoiTra.DataPropertyName = "IDDoiTra";
+            this.CT_IDDoiTra.HeaderText = "Mã phiếu trả";
+            this.CT_IDDoiTra.Name = "CT_IDDoiTra";
+            this.CT_IDDoiTra.Visible = false;
+            // 
+            // IDSP
+            // 
+            this.IDSP.DataPropertyName = "IDSP";
+            this.IDSP.HeaderText = "Mã sản phẩm";
+            this.IDSP.Name = "IDSP";
+            // 
+            // TenSP
+            // 
+            this.TenSP.DataPropertyName = "TenSP";
+            this.TenSP.HeaderText = "Tên sản phẩm";
+            this.TenSP.Name = "TenSP";
+            // 
+            // CT_IDHoaDon
+            // 
+            this.CT_IDHoaDon.DataPropertyName = "IDHoaDon";
+            this.CT_IDHoaDon.HeaderText = "Mã hóa đơn mua";
+            this.CT_IDHoaDon.Name = "CT_IDHoaDon";
+            this.CT_IDHoaDon.Visible = false;
+            // 
+            // CT_SoLuong
+            // 
+            this.CT_SoLuong.DataPropertyName = "SoLuong";
+            this.CT_SoLuong.HeaderText = "Số lượng";
+            this.CT_SoLuong.Name = "CT_SoLuong";
+            // 
+            // CT_LyDo
+            // 
+            this.CT_LyDo.DataPropertyName = "LyDo";
+            this.CT_LyDo.HeaderText = "Lý do";
+            this.CT_LyDo.Name = "CT_LyDo";
+            // 
+            // CT_IMEI
+            // 
+            this.CT_IMEI.DataPropertyName = "IMEI";
+            this.CT_IMEI.HeaderText = "IMEI";
+            this.CT_IMEI.Name = "CT_IMEI";
+            this.CT_IMEI.Visible = false;
+            // 
             // txtTimKiem
             // 
             this.txtTimKiem.Location = new System.Drawing.Point(12, 12);
@@ -201,56 +247,22 @@
             this.button1.Text = "In phiếu";
             this.button1.UseVisualStyleBackColor = true;
             // 
-            // CT_IDDoiTra
+            // btnXoaPT
             // 
-            this.CT_IDDoiTra.DataPropertyName = "IDDoiTra";
-            this.CT_IDDoiTra.HeaderText = "Mã phiếu trả";
-            this.CT_IDDoiTra.Name = "CT_IDDoiTra";
-            this.CT_IDDoiTra.Visible = false;
-            // 
-            // IDSP
-            // 
-            this.IDSP.DataPropertyName = "IDSP";
-            this.IDSP.HeaderText = "Mã sản phẩm";
-            this.IDSP.Name = "IDSP";
-            // 
-            // TenSP
-            // 
-            this.TenSP.DataPropertyName = "TenSP";
-            this.TenSP.HeaderText = "Tên sản phẩm";
-            this.TenSP.Name = "TenSP";
-            // 
-            // CT_IDHoaDon
-            // 
-            this.CT_IDHoaDon.DataPropertyName = "IDHoaDon";
-            this.CT_IDHoaDon.HeaderText = "Mã hóa đơn mua";
-            this.CT_IDHoaDon.Name = "CT_IDHoaDon";
-            this.CT_IDHoaDon.Visible = false;
-            // 
-            // CT_SoLuong
-            // 
-            this.CT_SoLuong.DataPropertyName = "SoLuong";
-            this.CT_SoLuong.HeaderText = "Số lượng";
-            this.CT_SoLuong.Name = "CT_SoLuong";
-            // 
-            // CT_LyDo
-            // 
-            this.CT_LyDo.DataPropertyName = "LyDo";
-            this.CT_LyDo.HeaderText = "Lý do";
-            this.CT_LyDo.Name = "CT_LyDo";
-            // 
-            // CT_IMEI
-            // 
-            this.CT_IMEI.DataPropertyName = "IMEI";
-            this.CT_IMEI.HeaderText = "IMEI";
-            this.CT_IMEI.Name = "CT_IMEI";
-            this.CT_IMEI.Visible = false;
+            this.btnXoaPT.Location = new System.Drawing.Point(545, 6);
+            this.btnXoaPT.Name = "btnXoaPT";
+            this.btnXoaPT.Size = new System.Drawing.Size(75, 56);
+            this.btnXoaPT.TabIndex = 8;
+            this.btnXoaPT.Text = "Xóa phiếu trả";
+            this.btnXoaPT.UseVisualStyleBackColor = true;
+            this.btnXoaPT.Click += new System.EventHandler(this.btnXoaPT_Click);
             // 
             // fTatCaPhieuDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1318, 632);
+            this.Controls.Add(this.btnXoaPT);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnThemPhieu);
             this.Controls.Add(this.label2);
@@ -260,7 +272,7 @@
             this.Controls.Add(this.dtgvCTPT);
             this.Controls.Add(this.dtgvDSPT);
             this.Name = "fTatCaPhieuDT";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Danh sách phiếu đổi";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDSPT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCTPT)).EndInit();
@@ -292,5 +304,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CT_SoLuong;
         private System.Windows.Forms.DataGridViewTextBoxColumn CT_LyDo;
         private System.Windows.Forms.DataGridViewTextBoxColumn CT_IMEI;
+        private System.Windows.Forms.Button btnXoaPT;
     }
 }

@@ -171,5 +171,15 @@ namespace TTCSDL_Module_4.DAO
             }
             return DSNV;
         }
+        public int XoaPhieuTra(int id)
+        {
+            int xoa = DataProvider.Instance.ExecuteNonQuery("delete from DOITRA where IDDoiTra = " + id);
+            if(xoa > 0)
+            {
+                return 1;
+
+            }
+            return 0;
+        }
     }
 }

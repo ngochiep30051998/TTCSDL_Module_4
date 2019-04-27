@@ -14,6 +14,7 @@ namespace TTCSDL_Module_4
     public partial class fTatCaPhieuDT : Form
     {
         BindingSource DanhSachSP = new BindingSource();
+        int tempIDPT = 0;
         public fTatCaPhieuDT()
         {
             InitializeComponent();
@@ -41,6 +42,7 @@ namespace TTCSDL_Module_4
                 DataGridViewRow dr = dtgvDSPT.Rows[index];
                 int IDDoiTra = Convert.ToInt32(dr.Cells["IDDoiTra"].Value);
                 DanhSachSP.DataSource = DoiTra_DAO.Instance.LayChiTietPT(IDDoiTra);
+                tempIDPT = IDDoiTra;
             } catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -50,6 +52,38 @@ namespace TTCSDL_Module_4
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
             dtgvDSPT.DataSource = DoiTra_DAO.Instance.TimKiemPhieuDT(txtTimKiem.Text);
+        }
+
+        private void btnXoaPT_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var xacnhan = MessageBox.Show("bạn có chắc chắn muốn xóa phiếu số : " + tempIDPT, "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(xacnhan == DialogResult.Yes)
+                {
+                    int xoa = DoiTra_DAO.Instance.XoaPhieuTra(tempIDPT);
+                    if (xoa == 0)
+                    {
+                        MessageBox.Show("xóa thất bại");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Xóa thành công");
+                        load();
+                        dtgvCTPT.Rows.Clear();
+                        dtgvCTPT.Refresh();
+                    }
+                }
+                else
+                {
+                    return;
+                }
+ 
+            } catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
