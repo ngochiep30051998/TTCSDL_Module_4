@@ -16,7 +16,7 @@ namespace TTCSDL_Module_4
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fTatCaPhieuDT());
+            Application.Run(new Main());
         }
     }
 }
