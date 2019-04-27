@@ -79,10 +79,12 @@ namespace TTCSDL_Module_4
             if(txtLyDo.Text == "")
             {
                 MessageBox.Show("Đổi trả thì phải có lí do chứ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             if (cbIMEI.Text == "")
             {
                 MessageBox.Show("Mã IMEI không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             else
             {
@@ -102,6 +104,7 @@ namespace TTCSDL_Module_4
                 ChiTiet_DT.TenSP = txtTenSP.Text;
                 ChiTiet_DT.Gia = nmDonGia.Value;
                 ChiTiet_DT.LyDo = txtLyDo.Text;
+                ChiTiet_DT.SoLuong = 1;
                 ChiTiet_DT.IMEI = cbIMEI.SelectedValue.ToString();
                 DanhSachPT.Add(ChiTiet_DT);
                 listDT.Add(ChiTiet_DT);

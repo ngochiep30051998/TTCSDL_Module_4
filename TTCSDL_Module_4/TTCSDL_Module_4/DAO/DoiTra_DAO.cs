@@ -58,7 +58,33 @@ namespace TTCSDL_Module_4.DAO
                 CTDoiTra_DTO hd = new CTDoiTra_DTO(item);
                 DanhSachSP.Add(hd);
             }
-            return DanhSachSP;
+            List<CTDoiTra_DTO> DanhSachSPMoi = new List<CTDoiTra_DTO>();
+            foreach(CTDoiTra_DTO item in DanhSachSP)
+            {
+                string[] arrListIMEI = item.IMEI.Split(' ');
+                string[] arrListLyDo = item.LyDo.Split('|');
+                if (arrListLyDo.Length > 1)
+                {
+                    for (int i = 0; i < arrListLyDo.Length; i++)
+                    {
+                        CTDoiTra_DTO newItem = new CTDoiTra_DTO();
+                        newItem.IDDoitra = item.IDDoitra;
+                        newItem.IDHoaDon = item.IDHoaDon;
+                        newItem.IDSP = item.IDSP;
+                        newItem.TenSP = item.TenSP;
+                        newItem.SoLuong = 1;
+                        newItem.Gia = item.Gia;
+                        newItem.IMEI = arrListIMEI[i];
+                        newItem.LyDo = arrListLyDo[i];
+                        DanhSachSPMoi.Add(newItem);
+                    }
+                }
+                else
+                {
+                    DanhSachSPMoi.Add(item);
+                }
+            }
+            return DanhSachSPMoi;
         }
         public int ThemKH(string TenKH,string SDT)
         {
