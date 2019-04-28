@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\DoiTra_DAO.cs" />
+    <Compile Include="DAO\KhachHang_DAO.cs" />
     <Compile Include="DTO\CTDoiTra_DTO.cs" />
     <Compile Include="DTO\DoiTra_DTO.cs" />
     <Compile Include="DTO\HoaDon_DTO.cs" />

@@ -101,3 +101,36 @@ begin
 	update KHACHHANG set TenKH = @TenKH where IDKH = @IDKH
 	update DOITRA set IDNV = @IDNhanVien, NgayDoi = @NgayTra where IDDoiTra = @IDPhieuTra
 end
+
+
+
+--proc tìm kiếm khách hàng
+
+alter proc TimKiemKH(@param nvarchar(250))
+as
+begin
+	select * from KHACHHANG
+	where CONVERT(nvarchar(250),IDKH) = @param
+		or TenKH like CONCAT('%',@param,'%')  
+		or SoDT like CONCAT('%',@param,'%') 
+		or TenDV like CONCAT('%',@param,'%') 
+		or MaSoThue like CONCAT('%',@param,'%') 
+		or DiaChi like CONCAT('%',@param,'%') 
+		or SoTK like CONCAT('%',@param,'%') 
+
+end
+
+TimKiemKH N'07'
+-- tạo trigger xóa khách hàng
+create trigger XoaKH on Khachhang instead of delete
+as
+declare @maKH int
+begin
+	select @maKH = IDKH from deleted
+	update HOADON set IDKH = null where IDKH = @maKH
+	update DOITRA set IDKH = null where IDKH = @maKH
+	update BAOHANH set IDKH = null where IDKH = @maKH
+	delete from KHACHHANG where IDKH = @maKH
+end
+select * from KHACHHANG where IDKH = 32
+update KHACHHANG set TenKH = N'Nguyễn Ngọc Hiệp', TenDV = N'MTA',MaSoThue = '5629423651', DiaChi = N'Hà Nội',SoTK = '0711000296950',SoDT = N'0968958647' where IDKH = 32

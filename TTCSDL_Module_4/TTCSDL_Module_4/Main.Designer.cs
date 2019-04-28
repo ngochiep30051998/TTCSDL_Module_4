@@ -35,7 +35,7 @@
             // 
             // btnQLKH
             // 
-            this.btnQLKH.Location = new System.Drawing.Point(57, 47);
+            this.btnQLKH.Location = new System.Drawing.Point(185, 101);
             this.btnQLKH.Name = "btnQLKH";
             this.btnQLKH.Size = new System.Drawing.Size(75, 74);
             this.btnQLKH.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // btnThemPT
             // 
-            this.btnThemPT.Location = new System.Drawing.Point(138, 47);
+            this.btnThemPT.Location = new System.Drawing.Point(320, 101);
             this.btnThemPT.Name = "btnThemPT";
             this.btnThemPT.Size = new System.Drawing.Size(75, 74);
             this.btnThemPT.TabIndex = 1;
@@ -55,7 +55,7 @@
             // 
             // btnQLDT
             // 
-            this.btnQLDT.Location = new System.Drawing.Point(57, 127);
+            this.btnQLDT.Location = new System.Drawing.Point(210, 229);
             this.btnQLDT.Name = "btnQLDT";
             this.btnQLDT.Size = new System.Drawing.Size(156, 74);
             this.btnQLDT.TabIndex = 2;
@@ -67,11 +67,12 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(277, 278);
+            this.ClientSize = new System.Drawing.Size(569, 419);
             this.Controls.Add(this.btnQLDT);
             this.Controls.Add(this.btnThemPT);
             this.Controls.Add(this.btnQLKH);
             this.Name = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.ResumeLayout(false);
 

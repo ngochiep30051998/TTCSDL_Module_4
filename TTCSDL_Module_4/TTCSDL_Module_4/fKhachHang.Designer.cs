@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvKhachHang = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtMaKH = new System.Windows.Forms.TextBox();
@@ -73,25 +73,25 @@
             this.TenDV,
             this.SoTK,
             this.MaSoThue});
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvKhachHang.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvKhachHang.DefaultCellStyle = dataGridViewCellStyle5;
             this.dtgvKhachHang.Location = new System.Drawing.Point(12, 38);
             this.dtgvKhachHang.Name = "dtgvKhachHang";
             this.dtgvKhachHang.Size = new System.Drawing.Size(852, 559);
             this.dtgvKhachHang.TabIndex = 0;
             // 
-            // textBox1
+            // txtTimKiem
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(291, 20);
-            this.textBox1.TabIndex = 1;
+            this.txtTimKiem.Location = new System.Drawing.Point(12, 12);
+            this.txtTimKiem.Name = "txtTimKiem";
+            this.txtTimKiem.Size = new System.Drawing.Size(291, 20);
+            this.txtTimKiem.TabIndex = 1;
             // 
             // btnTimKiem
             // 
@@ -101,6 +101,7 @@
             this.btnTimKiem.TabIndex = 2;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
+            this.btnTimKiem.Click += new System.EventHandler(this.btnTimKiem_Click);
             // 
             // label1
             // 
@@ -224,6 +225,7 @@
             this.btnCapNhap.TabIndex = 17;
             this.btnCapNhap.Text = "Cập nhật";
             this.btnCapNhap.UseVisualStyleBackColor = true;
+            this.btnCapNhap.Click += new System.EventHandler(this.btnCapNhap_Click);
             // 
             // btnHuy
             // 
@@ -233,6 +235,7 @@
             this.btnHuy.TabIndex = 18;
             this.btnHuy.Text = "Hủy thông tin đã nhập";
             this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnThem
             // 
@@ -242,6 +245,7 @@
             this.btnThem.TabIndex = 19;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
@@ -251,39 +255,47 @@
             this.btnXoa.TabIndex = 20;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // IDKH
             // 
+            this.IDKH.DataPropertyName = "IDKH";
             this.IDKH.HeaderText = "Mã khách hàng";
             this.IDKH.Name = "IDKH";
             // 
             // TenKH
             // 
+            this.TenKH.DataPropertyName = "TenKH";
             this.TenKH.HeaderText = "Tên khách hàng";
             this.TenKH.Name = "TenKH";
             // 
             // SoDT
             // 
+            this.SoDT.DataPropertyName = "SoDT";
             this.SoDT.HeaderText = "Số điện thoại";
             this.SoDT.Name = "SoDT";
             // 
             // DiaChi
             // 
+            this.DiaChi.DataPropertyName = "DiaChi";
             this.DiaChi.HeaderText = "Địa chỉ";
             this.DiaChi.Name = "DiaChi";
             // 
             // TenDV
             // 
+            this.TenDV.DataPropertyName = "TenDV";
             this.TenDV.HeaderText = "Tên đơn vị";
             this.TenDV.Name = "TenDV";
             // 
             // SoTK
             // 
+            this.SoTK.DataPropertyName = "SoTK";
             this.SoTK.HeaderText = "Số tài khoản";
             this.SoTK.Name = "SoTK";
             // 
             // MaSoThue
             // 
+            this.MaSoThue.DataPropertyName = "MaSoThue";
             this.MaSoThue.HeaderText = "Mã số thuế";
             this.MaSoThue.Name = "MaSoThue";
             // 
@@ -311,9 +323,10 @@
             this.Controls.Add(this.txtMaKH);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnTimKiem);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtTimKiem);
             this.Controls.Add(this.dtgvKhachHang);
             this.Name = "fKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Quản lí khách hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKhachHang)).EndInit();
             this.ResumeLayout(false);
@@ -324,15 +337,8 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtgvKhachHang;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtTimKiem;
         private System.Windows.Forms.Button btnTimKiem;
-        private System.Windows.Forms.DataGridViewTextBoxColumn IDKH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenKH;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoDT;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenDV;
-        private System.Windows.Forms.DataGridViewTextBoxColumn SoTK;
-        private System.Windows.Forms.DataGridViewTextBoxColumn MaSoThue;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtMaKH;
         private System.Windows.Forms.Label label2;
@@ -351,5 +357,12 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn IDKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenKH;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoDT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DiaChi;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenDV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn SoTK;
+        private System.Windows.Forms.DataGridViewTextBoxColumn MaSoThue;
     }
 }
