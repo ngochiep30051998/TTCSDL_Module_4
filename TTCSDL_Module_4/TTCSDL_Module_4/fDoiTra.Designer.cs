@@ -101,15 +101,10 @@
             this.label8 = new System.Windows.Forms.Label();
             this.dtpkNgayDoi = new System.Windows.Forms.DateTimePicker();
             this.btnThemPT = new System.Windows.Forms.Button();
-            this.btnInPT = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.nmDonGia = new System.Windows.Forms.NumericUpDown();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgvDSDT = new System.Windows.Forms.DataGridView();
-            this.btnXoaSP = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtMaSP = new System.Windows.Forms.TextBox();
             this.PDT_IDSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PDT_IMEI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PDT_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -118,6 +113,10 @@
             this.PDT_IDDoiTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PDT_IDHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PDT_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnXoaSP = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmDonGia)).BeginInit();
@@ -692,23 +691,13 @@
             // 
             // btnThemPT
             // 
-            this.btnThemPT.Location = new System.Drawing.Point(1270, 11);
+            this.btnThemPT.Location = new System.Drawing.Point(1285, 10);
             this.btnThemPT.Name = "btnThemPT";
-            this.btnThemPT.Size = new System.Drawing.Size(90, 51);
+            this.btnThemPT.Size = new System.Drawing.Size(150, 51);
             this.btnThemPT.TabIndex = 25;
             this.btnThemPT.Text = "Hoàn thành";
             this.btnThemPT.UseVisualStyleBackColor = true;
             this.btnThemPT.Click += new System.EventHandler(this.btnThemPT_Click);
-            // 
-            // btnInPT
-            // 
-            this.btnInPT.Location = new System.Drawing.Point(1366, 11);
-            this.btnInPT.Name = "btnInPT";
-            this.btnInPT.Size = new System.Drawing.Size(71, 53);
-            this.btnInPT.TabIndex = 26;
-            this.btnInPT.Text = "In phiếu đổi";
-            this.btnInPT.UseVisualStyleBackColor = true;
-            this.btnInPT.Click += new System.EventHandler(this.btnInPT_Click);
             // 
             // label9
             // 
@@ -769,45 +758,6 @@
             this.dtgvDSDT.TabIndex = 1;
             this.dtgvDSDT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDSDT_CellClick);
             // 
-            // btnXoaSP
-            // 
-            this.btnXoaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaSP.Location = new System.Drawing.Point(1148, 656);
-            this.btnXoaSP.Name = "btnXoaSP";
-            this.btnXoaSP.Size = new System.Drawing.Size(162, 56);
-            this.btnXoaSP.TabIndex = 29;
-            this.btnXoaSP.Text = "Xóa sản phẩm khỏi danh sách";
-            this.btnXoaSP.UseVisualStyleBackColor = true;
-            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(1316, 657);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(119, 56);
-            this.btnHuy.TabIndex = 30;
-            this.btnHuy.Text = "Hủy tất cả thông tin đã nhập";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 581);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 13);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "Mã sản phẩm";
-            // 
-            // txtMaSP
-            // 
-            this.txtMaSP.Location = new System.Drawing.Point(121, 578);
-            this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.ReadOnly = true;
-            this.txtMaSP.Size = new System.Drawing.Size(113, 20);
-            this.txtMaSP.TabIndex = 32;
-            // 
             // PDT_IDSP
             // 
             this.PDT_IDSP.DataPropertyName = "IDSP";
@@ -867,6 +817,45 @@
             this.PDT_SoLuong.ReadOnly = true;
             this.PDT_SoLuong.Visible = false;
             // 
+            // btnXoaSP
+            // 
+            this.btnXoaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaSP.Location = new System.Drawing.Point(1148, 656);
+            this.btnXoaSP.Name = "btnXoaSP";
+            this.btnXoaSP.Size = new System.Drawing.Size(162, 56);
+            this.btnXoaSP.TabIndex = 29;
+            this.btnXoaSP.Text = "Xóa sản phẩm khỏi danh sách";
+            this.btnXoaSP.UseVisualStyleBackColor = true;
+            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Location = new System.Drawing.Point(1316, 657);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(119, 56);
+            this.btnHuy.TabIndex = 30;
+            this.btnHuy.Text = "Hủy tất cả thông tin đã nhập";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(18, 581);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 13);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Mã sản phẩm";
+            // 
+            // txtMaSP
+            // 
+            this.txtMaSP.Location = new System.Drawing.Point(121, 578);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.ReadOnly = true;
+            this.txtMaSP.Size = new System.Drawing.Size(113, 20);
+            this.txtMaSP.TabIndex = 32;
+            // 
             // fDoiTra
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -878,7 +867,6 @@
             this.Controls.Add(this.btnXoaSP);
             this.Controls.Add(this.nmDonGia);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.btnInPT);
             this.Controls.Add(this.btnThemPT);
             this.Controls.Add(this.dtpkNgayDoi);
             this.Controls.Add(this.label8);
@@ -980,7 +968,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dtpkNgayDoi;
         private System.Windows.Forms.Button btnThemPT;
-        private System.Windows.Forms.Button btnInPT;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.NumericUpDown nmDonGia;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn22;

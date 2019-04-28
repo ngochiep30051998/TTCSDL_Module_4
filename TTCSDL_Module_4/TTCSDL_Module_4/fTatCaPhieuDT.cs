@@ -123,5 +123,26 @@ namespace TTCSDL_Module_4
                 MessageBox.Show(ex.Message);
             }
         }
+
+        private void btnInPhieu_Click(object sender, EventArgs e)
+        {
+            if(txtMaPT.Text == "")
+            {
+                MessageBox.Show("phải chọn ít nhất 1 phiếu để in!");
+                return;
+            }
+            string LyDo = "";
+            foreach(DataGridViewRow row in dtgvCTPT.Rows)
+            {
+                if(row.Cells["CT_IMEI"].Value != null)
+                {
+                    LyDo = LyDo + "Sản phẩm: " + row.Cells["TenSP"].Value + " - Mã IMEI:  " + row.Cells["CT_IMEI"].Value + " - Lý do:  " + row.Cells["CT_LyDo"].Value + Environment.NewLine;
+                }
+            }
+            fBaoCao f = new fBaoCao(Convert.ToInt32(txtMaPT.Text),LyDo);
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
     }
 }

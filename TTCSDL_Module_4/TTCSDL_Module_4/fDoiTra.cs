@@ -174,6 +174,27 @@ namespace TTCSDL_Module_4
                 }
                 string ThemPhieuDT = DoiTra_DAO.Instance.HoanThanh(listDT, dtpkNgayDoi.Value, txtTenKH.Text, Convert.ToInt32(cbNhanVien.SelectedValue), txtSDT.Text);
                 MessageBox.Show("thêm thành công 1 phiếu đổi!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                var XuatPhieu = MessageBox.Show("Bạn có muốn in phiếu vừa tạo ?", "In phiếu", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if(XuatPhieu == DialogResult.No)
+                {
+                    return;
+                }
+                else
+                {
+                    int idPhieuTra = MauBieu_DAO.Instance.LayIDPhieuDoiMoi();
+                    string LyDo = "";
+                    foreach (DataGridViewRow row in dtgvDSDT.Rows)
+                    {
+                        if (row.Cells["PDT_IMEI"].Value != null)
+                        {
+                            LyDo = LyDo + "Sản phẩm: " + row.Cells["PDT_TenSP"].Value + " - Mã IMEI:  " + row.Cells["PDT_IMEI"].Value + " - Lý do:  " + row.Cells["PDT_LyDo"].Value + Environment.NewLine;
+                        }
+                    }
+                    fBaoCao f = new fBaoCao(idPhieuTra, LyDo);
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
             } catch(Exception ex)
             {
                 MessageBox.Show(ex.Message);

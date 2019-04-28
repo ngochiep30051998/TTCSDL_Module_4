@@ -56,7 +56,7 @@ select max(IDKH) as IDKH from KHACHHANG
 select max(IDDoiTra) as IDDoiTra from DOITRA
 
 --------------
-alter proc ThemCTPhieuTra(@IDDoiTra int,@IDSP int,@SoLuong int,@LyDo nvarchar(250),@IDHoaDon int,@IMEI nvarchar(250))
+create proc ThemCTPhieuTra(@IDDoiTra int,@IDSP int,@SoLuong int,@LyDo nvarchar(250),@IDHoaDon int,@IMEI nvarchar(250))
 as
 begin
 	if(@IDSP not in (select IDSP from DOITRA join CHITIETDOITRA on DOITRA.IDDoiTra = CHITIETDOITRA.IDDoiTra
@@ -77,7 +77,7 @@ where DOITRA.IDDoiTra = 1
 
 update CHITIETDOITRA set SoLuong = SoLuong+1, LyDo = LyDo+ '|'+N'thích thì đổi', IMEI = IMEI+' ' where IDDoiTra = 1 and IDSP = 20
 select * from CHITIETDOITRA where IDDoiTra = 2
-
+--trigger xóa Phiếu đổi
 create trigger XoaPhieuDoiTra on DoiTra instead of delete
 as 
 declare @IDPT int
@@ -106,7 +106,7 @@ end
 
 --proc tìm kiếm khách hàng
 
-alter proc TimKiemKH(@param nvarchar(250))
+create proc TimKiemKH(@param nvarchar(250))
 as
 begin
 	select * from KHACHHANG
@@ -134,3 +134,11 @@ begin
 end
 select * from KHACHHANG where IDKH = 32
 update KHACHHANG set TenKH = N'Nguyễn Ngọc Hiệp', TenDV = N'MTA',MaSoThue = '5629423651', DiaChi = N'Hà Nội',SoTK = '0711000296950',SoDT = N'0968958647' where IDKH = 32
+select TenKH from DOITRA,KHACHHANG where DOITRA.IDKH = KHACHHANG.IDKH and IDDoiTra = 1
+select TenKH from DOITRA,KHACHHANG where DOITRA.IDKH = KHACHHANG.IDKH and IDDoiTra = 3
+select SoDT from DOITRA,KHACHHANG where DOITRA.IDKH = KHACHHANG.IDKH and IDDoiTra = 1 
+select sum(CHITIETDOITRA.SoLuong*CHITIETHOADON.Gia) from CHITIETDOITRA join CHITIETHOADON on CHITIETDOITRA.IDHoaDon = CHITIETHOADON.IDHD and CHITIETHOADON.IDSP = CHITIETDOITRA.IDSP where IDDoiTra = 2
+select * from CHITIETDOITRA where IDDoiTra = 1
+TRUNCATE TABLE CHITIETDOITRA
+select TenNV from DOITRA,NHANVIEN where DOITRA.IDNV = NHANVIEN.IDNV and IDDoiTra = 3
+select max(IDDoiTra) as IDDoiTra from DOITRA
