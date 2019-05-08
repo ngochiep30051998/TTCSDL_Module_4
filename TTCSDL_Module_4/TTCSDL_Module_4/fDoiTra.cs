@@ -78,7 +78,7 @@ namespace TTCSDL_Module_4
         {
             if(txtLyDo.Text == "")
             {
-                MessageBox.Show("Đổi trả thì phải có lí do chứ!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Bạn phải nhập lý do đổi trả!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             if (cbIMEI.Text == "")

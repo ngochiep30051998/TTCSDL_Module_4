@@ -103,6 +103,12 @@
     <Compile Include="fKhachHang.Designer.cs">
       <DependentUpon>fKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="fSuaChiTietPhieuTra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSuaChiTietPhieuTra.Designer.cs">
+      <DependentUpon>fSuaChiTietPhieuTra.cs</DependentUpon>
+    </Compile>
     <Compile Include="fTatCaPhieuDT.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fKhachHang.resx">
       <DependentUpon>fKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSuaChiTietPhieuTra.resx">
+      <DependentUpon>fSuaChiTietPhieuTra.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fTatCaPhieuDT.resx">
       <DependentUpon>fTatCaPhieuDT.cs</DependentUpon>

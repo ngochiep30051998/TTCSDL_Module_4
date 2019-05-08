@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvDSPT = new System.Windows.Forms.DataGridView();
             this.IDDoiTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +62,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.cbNhanVien = new System.Windows.Forms.ComboBox();
             this.btnCapNhatPhieuTra = new System.Windows.Forms.Button();
+            this.btnSuaChiTiet = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvDSPT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvCTPT)).BeginInit();
             this.SuspendLayout();
@@ -80,8 +81,8 @@
             this.TenNV});
             this.dtgvDSPT.Location = new System.Drawing.Point(12, 65);
             this.dtgvDSPT.Name = "dtgvDSPT";
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvDSPT.RowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvDSPT.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgvDSPT.Size = new System.Drawing.Size(689, 395);
             this.dtgvDSPT.TabIndex = 0;
             this.dtgvDSPT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDSPT_CellClick);
@@ -143,14 +144,14 @@
             this.CT_SoLuong,
             this.CT_LyDo,
             this.CT_IMEI});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvCTPT.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvCTPT.DefaultCellStyle = dataGridViewCellStyle4;
             this.dtgvCTPT.Location = new System.Drawing.Point(721, 65);
             this.dtgvCTPT.Name = "dtgvCTPT";
             this.dtgvCTPT.Size = new System.Drawing.Size(585, 532);
@@ -354,11 +355,22 @@
             this.btnCapNhatPhieuTra.UseVisualStyleBackColor = true;
             this.btnCapNhatPhieuTra.Click += new System.EventHandler(this.btnCapNhatPhieuTra_Click);
             // 
+            // btnSuaChiTiet
+            // 
+            this.btnSuaChiTiet.Location = new System.Drawing.Point(1150, 3);
+            this.btnSuaChiTiet.Name = "btnSuaChiTiet";
+            this.btnSuaChiTiet.Size = new System.Drawing.Size(75, 56);
+            this.btnSuaChiTiet.TabIndex = 20;
+            this.btnSuaChiTiet.Text = "Sửa chi tiết phiếu trả";
+            this.btnSuaChiTiet.UseVisualStyleBackColor = true;
+            this.btnSuaChiTiet.Click += new System.EventHandler(this.btnSuaChiTiet_Click);
+            // 
             // fTatCaPhieuDT
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1318, 625);
+            this.Controls.Add(this.btnSuaChiTiet);
             this.Controls.Add(this.btnCapNhatPhieuTra);
             this.Controls.Add(this.cbNhanVien);
             this.Controls.Add(this.label7);
@@ -422,5 +434,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox cbNhanVien;
         private System.Windows.Forms.Button btnCapNhatPhieuTra;
+        private System.Windows.Forms.Button btnSuaChiTiet;
     }
 }

@@ -9,14 +9,13 @@ namespace TTCSDL_Module_4.DTO
 {
     public class CTDoiTra_DTO
     {
+        public int IDHoaDon { get; set; }
+        public int IDSP { get; set; }
         public string IMEI { get; set; }
         public string TenSP { get; set; }
         public Nullable<decimal> Gia { get; set; }
         public string LyDo { get; set; }
-
         public int IDDoitra { get; set; }
-        public int IDSP { get; set; }
-        public int IDHoaDon { get; set; }
         public int SoLuong { get; set; }
         public CTDoiTra_DTO()
         {

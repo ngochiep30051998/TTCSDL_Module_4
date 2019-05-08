@@ -105,18 +105,18 @@
             this.nmDonGia = new System.Windows.Forms.NumericUpDown();
             this.dataGridViewTextBoxColumn22 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dtgvDSDT = new System.Windows.Forms.DataGridView();
+            this.btnXoaSP = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtMaSP = new System.Windows.Forms.TextBox();
+            this.PDT_IDHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PDT_IDSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PDT_IMEI = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PDT_TenSP = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PDT_Gia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PDT_LyDo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PDT_IDDoiTra = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PDT_IDHoaDon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PDT_SoLuong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXoaSP = new System.Windows.Forms.Button();
-            this.btnHuy = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txtMaSP = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvHD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvSP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nmDonGia)).BeginInit();
@@ -737,13 +737,13 @@
             this.dtgvDSDT.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
             this.dtgvDSDT.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgvDSDT.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.PDT_IDHoaDon,
             this.PDT_IDSP,
             this.PDT_IMEI,
             this.PDT_TenSP,
             this.PDT_Gia,
             this.PDT_LyDo,
             this.PDT_IDDoiTra,
-            this.PDT_IDHoaDon,
             this.PDT_SoLuong});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Window;
@@ -759,6 +759,53 @@
             this.dtgvDSDT.Size = new System.Drawing.Size(857, 561);
             this.dtgvDSDT.TabIndex = 1;
             this.dtgvDSDT.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgvDSDT_CellClick);
+            // 
+            // btnXoaSP
+            // 
+            this.btnXoaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXoaSP.Location = new System.Drawing.Point(1148, 656);
+            this.btnXoaSP.Name = "btnXoaSP";
+            this.btnXoaSP.Size = new System.Drawing.Size(162, 56);
+            this.btnXoaSP.TabIndex = 29;
+            this.btnXoaSP.Text = "Xóa sản phẩm khỏi danh sách";
+            this.btnXoaSP.UseVisualStyleBackColor = true;
+            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnHuy.Location = new System.Drawing.Point(1316, 657);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(119, 56);
+            this.btnHuy.TabIndex = 30;
+            this.btnHuy.Text = "Hủy tất cả thông tin đã nhập";
+            this.btnHuy.UseVisualStyleBackColor = true;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(18, 581);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(71, 13);
+            this.label10.TabIndex = 31;
+            this.label10.Text = "Mã sản phẩm";
+            // 
+            // txtMaSP
+            // 
+            this.txtMaSP.Enabled = false;
+            this.txtMaSP.Location = new System.Drawing.Point(121, 578);
+            this.txtMaSP.Name = "txtMaSP";
+            this.txtMaSP.ReadOnly = true;
+            this.txtMaSP.Size = new System.Drawing.Size(113, 20);
+            this.txtMaSP.TabIndex = 32;
+            // 
+            // PDT_IDHoaDon
+            // 
+            this.PDT_IDHoaDon.DataPropertyName = "IDHoaDon";
+            this.PDT_IDHoaDon.HeaderText = "Mã hóa đơn";
+            this.PDT_IDHoaDon.Name = "PDT_IDHoaDon";
+            this.PDT_IDHoaDon.ReadOnly = true;
             // 
             // PDT_IDSP
             // 
@@ -803,14 +850,6 @@
             this.PDT_IDDoiTra.ReadOnly = true;
             this.PDT_IDDoiTra.Visible = false;
             // 
-            // PDT_IDHoaDon
-            // 
-            this.PDT_IDHoaDon.DataPropertyName = "IDHoaDon";
-            this.PDT_IDHoaDon.HeaderText = "IDHoaDon";
-            this.PDT_IDHoaDon.Name = "PDT_IDHoaDon";
-            this.PDT_IDHoaDon.ReadOnly = true;
-            this.PDT_IDHoaDon.Visible = false;
-            // 
             // PDT_SoLuong
             // 
             this.PDT_SoLuong.DataPropertyName = "SoLuong";
@@ -818,46 +857,6 @@
             this.PDT_SoLuong.Name = "PDT_SoLuong";
             this.PDT_SoLuong.ReadOnly = true;
             this.PDT_SoLuong.Visible = false;
-            // 
-            // btnXoaSP
-            // 
-            this.btnXoaSP.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXoaSP.Location = new System.Drawing.Point(1148, 656);
-            this.btnXoaSP.Name = "btnXoaSP";
-            this.btnXoaSP.Size = new System.Drawing.Size(162, 56);
-            this.btnXoaSP.TabIndex = 29;
-            this.btnXoaSP.Text = "Xóa sản phẩm khỏi danh sách";
-            this.btnXoaSP.UseVisualStyleBackColor = true;
-            this.btnXoaSP.Click += new System.EventHandler(this.btnXoaSP_Click);
-            // 
-            // btnHuy
-            // 
-            this.btnHuy.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHuy.Location = new System.Drawing.Point(1316, 657);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(119, 56);
-            this.btnHuy.TabIndex = 30;
-            this.btnHuy.Text = "Hủy tất cả thông tin đã nhập";
-            this.btnHuy.UseVisualStyleBackColor = true;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(18, 581);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(71, 13);
-            this.label10.TabIndex = 31;
-            this.label10.Text = "Mã sản phẩm";
-            // 
-            // txtMaSP
-            // 
-            this.txtMaSP.Enabled = false;
-            this.txtMaSP.Location = new System.Drawing.Point(121, 578);
-            this.txtMaSP.Name = "txtMaSP";
-            this.txtMaSP.ReadOnly = true;
-            this.txtMaSP.Size = new System.Drawing.Size(113, 20);
-            this.txtMaSP.TabIndex = 32;
             // 
             // fDoiTra
             // 
@@ -987,13 +986,13 @@
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtMaSP;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PDT_IDHoaDon;
         private System.Windows.Forms.DataGridViewTextBoxColumn PDT_IDSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn PDT_IMEI;
         private System.Windows.Forms.DataGridViewTextBoxColumn PDT_TenSP;
         private System.Windows.Forms.DataGridViewTextBoxColumn PDT_Gia;
         private System.Windows.Forms.DataGridViewTextBoxColumn PDT_LyDo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PDT_IDDoiTra;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PDT_IDHoaDon;
         private System.Windows.Forms.DataGridViewTextBoxColumn PDT_SoLuong;
     }
 }

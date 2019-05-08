@@ -80,3 +80,4 @@ E:\study\nam 3\thực tập csdl\Module_4\TTCSDL_Module_4\TTCSDL_Module_4\obj\De
 E:\study\nam 3\thực tập csdl\Module_4\TTCSDL_Module_4\TTCSDL_Module_4\obj\Debug\TTCSDL_Module_4.fBaoCao.resources
 E:\study\nam 3\thực tập csdl\Module_4\TTCSDL_Module_4\TTCSDL_Module_4\obj\Debug\RdlCompile.cache
 E:\study\nam 3\thực tập csdl\Module_4\TTCSDL_Module_4\TTCSDL_Module_4\obj\Debug\RdlCompile.compiled
+E:\study\nam 3\thực tập csdl\Module_4\TTCSDL_Module_4\TTCSDL_Module_4\obj\Debug\TTCSDL_Module_4.fSuaChiTietPhieuTra.resources

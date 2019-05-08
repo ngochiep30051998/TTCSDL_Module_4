@@ -55,7 +55,7 @@ namespace TTCSDL_Module_4
                 DanhSachSP.DataSource = DoiTra_DAO.Instance.LayChiTietPT(IDDoiTra);
             } catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                return;
             }
         }
 
@@ -140,6 +140,19 @@ namespace TTCSDL_Module_4
                 }
             }
             fBaoCao f = new fBaoCao(Convert.ToInt32(txtMaPT.Text),LyDo);
+            this.Hide();
+            f.ShowDialog();
+            this.Show();
+        }
+
+        private void btnSuaChiTiet_Click(object sender, EventArgs e)
+        {
+            if(txtMaPT.Text == "")
+            {
+                MessageBox.Show("phải chọn ít nhất 1 phiếu trả!", "Thông báo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            fSuaChiTietPhieuTra f = new fSuaChiTietPhieuTra(Convert.ToInt32(txtMaPT.Text));
             this.Hide();
             f.ShowDialog();
             this.Show();

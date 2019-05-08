@@ -216,5 +216,23 @@ namespace TTCSDL_Module_4.DAO
             }
             return 0;
         }
+        public int SuaPhieuTra(List<CTDoiTra_DTO> DSPT,int IDDoitra)
+        {
+            try
+            {
+                int XoaCT_PT = DataProvider.Instance.ExecuteNonQuery("delete from CHITIETDOITRA where IDDoiTra = "+ IDDoitra);
+                foreach (CTDoiTra_DTO ct in DSPT)
+                {
+                    int insert = DataProvider.Instance.ExecuteNonQuery("ThemCTPhieuTra @IDDoiTra , @IDSP , @SoLuong , @LyDo , @IDHoaDon , @IMEI",
+                                                                        new object[] { IDDoitra, ct.IDSP, ct.SoLuong, ct.LyDo, ct.IDHoaDon, ct.IMEI });
+                }
+                return 1;
+            }
+            catch (Exception ex)
+            {
+                return 0;
+
+            }
+        }
     }
 }
