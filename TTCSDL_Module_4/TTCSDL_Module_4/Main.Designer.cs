@@ -35,9 +35,9 @@
             // 
             // btnQLKH
             // 
-            this.btnQLKH.Location = new System.Drawing.Point(185, 101);
+            this.btnQLKH.Location = new System.Drawing.Point(108, 80);
             this.btnQLKH.Name = "btnQLKH";
-            this.btnQLKH.Size = new System.Drawing.Size(75, 74);
+            this.btnQLKH.Size = new System.Drawing.Size(81, 74);
             this.btnQLKH.TabIndex = 0;
             this.btnQLKH.Text = "Quản lí khách hàng";
             this.btnQLKH.UseVisualStyleBackColor = true;
@@ -45,7 +45,7 @@
             // 
             // btnThemPT
             // 
-            this.btnThemPT.Location = new System.Drawing.Point(320, 101);
+            this.btnThemPT.Location = new System.Drawing.Point(195, 80);
             this.btnThemPT.Name = "btnThemPT";
             this.btnThemPT.Size = new System.Drawing.Size(75, 74);
             this.btnThemPT.TabIndex = 1;
@@ -55,9 +55,9 @@
             // 
             // btnQLDT
             // 
-            this.btnQLDT.Location = new System.Drawing.Point(210, 229);
+            this.btnQLDT.Location = new System.Drawing.Point(108, 160);
             this.btnQLDT.Name = "btnQLDT";
-            this.btnQLDT.Size = new System.Drawing.Size(156, 74);
+            this.btnQLDT.Size = new System.Drawing.Size(162, 74);
             this.btnQLDT.TabIndex = 2;
             this.btnQLDT.Text = "Quản lí nghiệp vụ đổi trả";
             this.btnQLDT.UseVisualStyleBackColor = true;
@@ -67,7 +67,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(569, 419);
+            this.ClientSize = new System.Drawing.Size(382, 313);
             this.Controls.Add(this.btnQLDT);
             this.Controls.Add(this.btnThemPT);
             this.Controls.Add(this.btnQLKH);

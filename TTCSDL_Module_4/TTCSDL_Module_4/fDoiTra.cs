@@ -43,7 +43,7 @@ namespace TTCSDL_Module_4
         }
         private void btnTimKiem_Click(object sender, EventArgs e)
         {
-            dtgvHD.DataSource = DoiTra_DAO.Instance.TimKiemHD(txtTimKiem.Text);
+            DanhSachHD.DataSource = DoiTra_DAO.Instance.TimKiemHD(txtTimKiem.Text);
         }
 
         private void btnLayThongTinHD_Click(object sender, EventArgs e)
@@ -112,11 +112,6 @@ namespace TTCSDL_Module_4
             }
             
         }
-        private void btnInPT_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void dtgvDSDT_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try

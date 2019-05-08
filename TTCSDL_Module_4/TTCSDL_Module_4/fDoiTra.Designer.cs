@@ -582,6 +582,7 @@
             // 
             // txtTenSP
             // 
+            this.txtTenSP.Enabled = false;
             this.txtTenSP.Location = new System.Drawing.Point(121, 605);
             this.txtTenSP.Name = "txtTenSP";
             this.txtTenSP.ReadOnly = true;
@@ -710,6 +711,7 @@
             // 
             // nmDonGia
             // 
+            this.nmDonGia.Enabled = false;
             this.nmDonGia.Location = new System.Drawing.Point(336, 639);
             this.nmDonGia.Maximum = new decimal(new int[] {
             1000000000,
@@ -850,6 +852,7 @@
             // 
             // txtMaSP
             // 
+            this.txtMaSP.Enabled = false;
             this.txtMaSP.Location = new System.Drawing.Point(121, 578);
             this.txtMaSP.Name = "txtMaSP";
             this.txtMaSP.ReadOnly = true;

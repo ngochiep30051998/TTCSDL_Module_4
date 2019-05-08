@@ -28,8 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dtgvKhachHang = new System.Windows.Forms.DataGridView();
+            this.IDKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SoTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaSoThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -50,13 +57,6 @@
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
-            this.IDKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenKH = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoDT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DiaChi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TenDV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SoTK = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaSoThue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgvKhachHang)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,18 +73,68 @@
             this.TenDV,
             this.SoTK,
             this.MaSoThue});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvKhachHang.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvKhachHang.DefaultCellStyle = dataGridViewCellStyle1;
             this.dtgvKhachHang.Location = new System.Drawing.Point(12, 38);
             this.dtgvKhachHang.Name = "dtgvKhachHang";
+            this.dtgvKhachHang.ReadOnly = true;
             this.dtgvKhachHang.Size = new System.Drawing.Size(852, 559);
             this.dtgvKhachHang.TabIndex = 0;
+            // 
+            // IDKH
+            // 
+            this.IDKH.DataPropertyName = "IDKH";
+            this.IDKH.HeaderText = "Mã khách hàng";
+            this.IDKH.Name = "IDKH";
+            this.IDKH.ReadOnly = true;
+            // 
+            // TenKH
+            // 
+            this.TenKH.DataPropertyName = "TenKH";
+            this.TenKH.HeaderText = "Tên khách hàng";
+            this.TenKH.Name = "TenKH";
+            this.TenKH.ReadOnly = true;
+            // 
+            // SoDT
+            // 
+            this.SoDT.DataPropertyName = "SoDT";
+            this.SoDT.HeaderText = "Số điện thoại";
+            this.SoDT.Name = "SoDT";
+            this.SoDT.ReadOnly = true;
+            // 
+            // DiaChi
+            // 
+            this.DiaChi.DataPropertyName = "DiaChi";
+            this.DiaChi.HeaderText = "Địa chỉ";
+            this.DiaChi.Name = "DiaChi";
+            this.DiaChi.ReadOnly = true;
+            // 
+            // TenDV
+            // 
+            this.TenDV.DataPropertyName = "TenDV";
+            this.TenDV.HeaderText = "Tên đơn vị";
+            this.TenDV.Name = "TenDV";
+            this.TenDV.ReadOnly = true;
+            // 
+            // SoTK
+            // 
+            this.SoTK.DataPropertyName = "SoTK";
+            this.SoTK.HeaderText = "Số tài khoản";
+            this.SoTK.Name = "SoTK";
+            this.SoTK.ReadOnly = true;
+            // 
+            // MaSoThue
+            // 
+            this.MaSoThue.DataPropertyName = "MaSoThue";
+            this.MaSoThue.HeaderText = "Mã số thuế";
+            this.MaSoThue.Name = "MaSoThue";
+            this.MaSoThue.ReadOnly = true;
             // 
             // txtTimKiem
             // 
@@ -114,6 +164,7 @@
             // 
             // txtMaKH
             // 
+            this.txtMaKH.Enabled = false;
             this.txtMaKH.Location = new System.Drawing.Point(962, 38);
             this.txtMaKH.Name = "txtMaKH";
             this.txtMaKH.ReadOnly = true;
@@ -256,48 +307,6 @@
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-            // 
-            // IDKH
-            // 
-            this.IDKH.DataPropertyName = "IDKH";
-            this.IDKH.HeaderText = "Mã khách hàng";
-            this.IDKH.Name = "IDKH";
-            // 
-            // TenKH
-            // 
-            this.TenKH.DataPropertyName = "TenKH";
-            this.TenKH.HeaderText = "Tên khách hàng";
-            this.TenKH.Name = "TenKH";
-            // 
-            // SoDT
-            // 
-            this.SoDT.DataPropertyName = "SoDT";
-            this.SoDT.HeaderText = "Số điện thoại";
-            this.SoDT.Name = "SoDT";
-            // 
-            // DiaChi
-            // 
-            this.DiaChi.DataPropertyName = "DiaChi";
-            this.DiaChi.HeaderText = "Địa chỉ";
-            this.DiaChi.Name = "DiaChi";
-            // 
-            // TenDV
-            // 
-            this.TenDV.DataPropertyName = "TenDV";
-            this.TenDV.HeaderText = "Tên đơn vị";
-            this.TenDV.Name = "TenDV";
-            // 
-            // SoTK
-            // 
-            this.SoTK.DataPropertyName = "SoTK";
-            this.SoTK.HeaderText = "Số tài khoản";
-            this.SoTK.Name = "SoTK";
-            // 
-            // MaSoThue
-            // 
-            this.MaSoThue.DataPropertyName = "MaSoThue";
-            this.MaSoThue.HeaderText = "Mã số thuế";
-            this.MaSoThue.Name = "MaSoThue";
             // 
             // fKhachHang
             // 
